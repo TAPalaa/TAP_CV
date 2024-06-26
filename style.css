@@ -1,0 +1,301 @@
+:root {
+    --m-col : black
+
+}
+
+*{
+  font-family: 'Amiri', serif;
+  scroll-behavior: smooth;
+  background-color: #000000;
+}
+header {
+    grid-area: h;
+    background-color: var(--m-col);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+}
+section{
+    grid-area: s;
+    background-color: var(--m-col);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    flex-direction: column;
+
+
+}
+aside{
+  grid-area: a;
+  position: fixed;
+  bottom: 100px;
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  justify-content: flex-end;
+  border: 2px solid blue;
+  border-radius: 10px;
+  padding-bottom: 10px;
+  transition: all 0.5s ease-in-out;
+}
+aside:hover {
+  transform: scale(1.01) rotate(-0.1deg);
+  box-shadow: 4px 4px 20px 10px #009688;
+
+}
+aside a{
+    color: whitesmoke;
+    display: flex;
+    margin: 0px 30px;
+    align-items: center;
+    font-size: 1.5em;
+    transition: all 0.2s ease-in-out;
+    padding: 10px;
+    text-decoration: none;
+}
+aside a:hover{
+
+    border-bottom: 0.5px solid #009688;
+    margin-left: 50px;
+    font-size: 1.8em;
+    color: blue;
+    transform: scale(1.01) rotate(-0.1deg);
+    padding: 8px;
+
+}
+aside strong {
+  font-size: 2em;
+  color: blue;
+}
+footer{
+    grid-area: f;
+    background-color: var(--m-col);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: red;
+    font-size: 4em;
+}
+body{
+    display: grid;
+    grid-template-areas: "h h h" "a s s" "f f f";
+    grid-template-columns: 300px 700px auto;
+    grid-template-rows: 150px auto 300px;
+    background-color: var(--m-col);
+}
+
+.logo {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+  }
+  .logo b{
+    font: 400 10vh "Vibur";
+    color: #fee;
+    text-shadow: 0 -40px 100px, 0 0 2px, 0 0 1em #ff4444, 0 0 0.5em #ff4444, 0 0 0.1em #ff4444, 0 10px 3px #000;
+  }
+  .logo b span{
+    animation: blink linear infinite 2s;
+  }
+  .logo b span:nth-of-type(2){
+    animation: blink linear infinite 3s;
+  }
+  @keyframes blink {
+    78% {
+      color: inherit;
+      text-shadow: inherit;
+    }
+    79%{
+      color: #333;
+    }
+    80% {
+      
+      text-shadow: none;
+    }
+    81% {
+      color: inherit;
+      text-shadow: inherit;
+    }
+    82% {
+      color: #333;
+      text-shadow: none;
+    }
+    83% {
+      color: inherit;
+      text-shadow: inherit;
+    }
+    92% {
+      color: #333;
+      text-shadow: none;
+    }
+    92.5% {
+      color: inherit;
+      text-shadow: inherit;
+    }
+  }
+
+  
+  .a{
+    border-top-left-radius: 10px 20px;
+    border-bottom-right-radius: 10px 20px;
+    border-top-right-radius: 50%;
+    border-bottom-left-radius: 50%;
+    padding: 10px 30px;
+    height: 20px;
+    text-decoration: none;
+    color: blue;
+    box-shadow: 3px 3px 20px 3px blue;
+    text-align: center;
+    margin: 10px;
+    transition: all 1s ease-in-out;
+
+}
+.a:hover{
+    color: #009688;
+    box-shadow: 4px 4px 20px 10px #009688;
+    border-top-left-radius: 15px 25px;
+    border-bottom-right-radius: 15px 25px;
+    border-top-right-radius: 50%;
+    border-bottom-left-radius: 50%;
+}
+
+.boox{
+  width: 500px;
+  font-size: larger;
+  
+}
+.boox h2{
+  color: var(--m-col);
+  background-color: blue;
+  padding: 10px 20px;
+  font-size: 20px;
+  font-weight: 700;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  margin-bottom: 0px;
+  width: 90%;
+}
+
+.boox ul{
+  position: relative;
+  background-color: var(--m-col);
+  padding-left: 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 0px;
+  border-bottom: 20px solid blue;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  color: blue;
+  transition: all 0.5s ease-in-out;
+
+}
+.boox ul:hover {
+  transform: scale(1.01) rotate(-0.1deg);
+
+
+}
+.boox ul:hover li {
+  opacity: 0.2;
+}
+.boox ul li{
+  list-style: none;
+  padding: 5%;
+  width: 90%;
+  background-color: var(--m-col);
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
+  transition: transform 0.5s ease-in-out;
+}
+.boox ul li:hover{
+  transform: scale(1.1);
+  z-index: 100;
+  background-color: blue;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
+  color: var(--m-col);
+  opacity: 1;
+  box-shadow: 4px 4px 20px 10px #009688;
+}
+.boox ul:hover .li{
+  opacity: 0.2;
+}
+.boox ul .li{
+  list-style: none;
+  padding: 5%;
+  width: 80%;
+  background-color: var(--m-col);
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
+  transition: transform 0.5s;
+}
+.boox ul .li:hover {
+  transform: scale(1.1);
+  z-index: 100;
+  background-color: red;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
+  color: var(--m-col);
+  opacity: 1;
+  transform: scale(1.1);
+  box-shadow: 4px 4px 20px 10px rgb(172, 0, 0);
+}
+
+.boox ul .li span {
+  width: 20px;
+  height: 20px;
+  text-align: center;
+  line-height: 20px;
+  background-color: red;
+  color: var(--m-col);
+  display: inline-block;
+  border-radius: 50%;
+  margin-right: 10px;
+  font-size: 12px;
+  font-weight: 600;
+  transition: transformY(-2px);
+}
+.boox ul .li:hover span {
+  background-color: var(--m-col);
+  color: red;
+  
+}
+.boox ul li span {
+  width: 20px;
+  height: 20px;
+  text-align: center;
+  line-height: 20px;
+  background-color: blue;
+  color: var(--m-col);
+  display: inline-block;
+  border-radius: 50%;
+  margin-right: 10px;
+  font-size: 12px;
+  font-weight: 600;
+  transition: transformY(-2px);
+}
+.boox ul li:hover span {
+  background-color: var(--m-col);
+  color: blue;
+}
+.text {
+  color: red;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  font-size: 1.8em;
+  background-color: var(--m-col);
+  margin: 0px 20px;
+  box-shadow: 3px 3px 20px 3px blue;
+  transition: all 0.5s ease-in-out;
+  margin-left: 40px;
+  margin-bottom: 40px;
+  width: 90%;
+}
+.text:hover {
+  transform: scale(1.01) rotate(-0.1deg);
+  box-shadow: 4px 4px 20px 10px #009688;
+
+}
